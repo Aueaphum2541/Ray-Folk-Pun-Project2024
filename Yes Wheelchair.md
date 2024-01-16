@@ -37,19 +37,19 @@
 1. As a **Wheelchair User**, I want to **assess my physical abilities for optimal wheelchair usage** so that **I can enhance my mobility and overall wheelchair experience.**
    - Scenario: **Wheelchair User's Assessment**, given **a Wheelchair User initiating the evaluation process**, when **the system prompts for personal information (name, surname, weight, and height)**, then **the system accurately records and stores the user's information for future evaluations**.
 
-2. **As a Wheelchair User, I want to receive feedback on my wheelchair usage abilities for continuous improvement so that I can enhance my skills and overall well-being.**
+2. As a **Wheelchair User**, I want to **receive feedback on my wheelchair usage abilities for continuous improvement** so that **I can enhance my skills and overall well-being.**
    - Scenario: **User's Feedback for Improvement**, given **a completed evaluation by a Wheelchair User**, when **the system processes the data, then it generates a summary of the user's performance and suggests areas for improvement**.
 
-3. **As a Wheelchair Coach, I want to evaluate the user's strength and mobility to recommend suitable wheelchairs so that users can have personalized and comfortable mobility solutions.**
+3. As a **Wheelchair Coach**, I want to **evaluate the user's strength and mobility to recommend suitable wheelchairs** so that **users can have personalized and comfortable mobility solutions.**
    - Scenario:**Wheelchair Coach's Evaluation**, given **an ongoing evaluation**, when **the system, as requested by a Wheelchair Coach, conducts strength tests, anaerobic performance assessments, and evaluates nimbleness**, then **it processes the data and generates parameters (distance, speed, time) for each test, indicating suitability**.
 
-4. **As a Physical Therapist, I want to access accurate data for evaluating the user's wheelchair usage abilities so that I can provide tailored therapeutic interventions and support.**
+4. As a **Physical Therapist**, I want to **access accurate data for evaluating the user's wheelchair usage abilities** so that **I can provide tailored therapeutic interventions and support.**
    - Scenario: **Physical Therapist's Data Access**, **given a Physical Therapist accessing the system**, when **entering the user's information and observing wheelchair movement during tests**, then **the system accurately records and displays the data, enabling informed assessments**.
 
-5. **As a Wheelchair Company, I want to use the evaluation system to recommend appropriate wheelchair models so that users can have a personalized and optimal mobility solution.**
+5. As a **Wheelchair Company**, I want to **use the evaluation system to recommend appropriate wheelchair models** so that **users can have a personalized and optimal mobility solution.**
    - Scenario: **Wheelchair Company's Recommendations**, given **evaluation results**, when **the system processes the data**, then **it provides personalized recommendations for Wheelchair types, as required by a Wheelchair Company, based on the user's physical fitness and usage requirements**.
 
-6. **As a Wheelchair Company, I want to ensure accurate and reliable data processing for evaluating wheelchair performance so that users can trust the assessment results and recommendations.**
+6. As a **Wheelchair Company**, I want to **ensure accurate and reliable data processing for evaluating wheelchair performance** so that **users can trust the assessment results and recommendations.**
    - Scenario: **Data Processing for Trustworthy Results**, given **movement data received from IMU sensors during the evaluation**, **when the system processes the data**, then **it generates accurate and reliable evaluation results, ensuring the maximum error percentage for distance and time measurements is within acceptable limits (e.g., 1.5%).**
 
   
