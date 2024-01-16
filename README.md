@@ -1,7 +1,7 @@
 # ICT720-project-2024
 # Group 1 [Yes Wheelchair](https://www.facebook.com/100066453249785/posts/pfbid02DiEnpRqT1H4SUK5FBEpH5kz9rZoqYkPg4KNShhSsfJ4qUXWBaDWnk1JEBK1ZKjNhl)
 ![419119466_727492066142562_5958509345109420164_n](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/e5daaaf6-a96d-479f-8115-b71499980b1d)
-
+# Development of System to Evaluate Wheelchair User Capability
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/5db47476-e9c5-4a91-936e-4eaef0677feb)
 
 ## Objectives
