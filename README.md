@@ -4,7 +4,6 @@
 
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/5db47476-e9c5-4a91-936e-4eaef0677feb)
 
-Repo to collect example of ICT720 Course
 ## Objectives
 1. objective 1
 2. objecrtive 2
