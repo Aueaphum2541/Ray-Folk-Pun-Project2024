@@ -6,27 +6,6 @@
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/5db47476-e9c5-4a91-936e-4eaef0677feb)
 
 ## Objectives
-1. objective 1
-2. objecrtive 2
-3. objective 3
-
-## Stakeholder
-1. Wheelchair Company
-2. Physical Therapy
-3. Wheelchair Coach
-
-## User Stories
-
-1. US1: as an owner, I want to register a device with my home WiFi network, so that I can use it.
-
-   
-     i. acceptance criteria #1 I can fill SSID/password of my home WiFi
-
-
-     ii. acceptance criteria #2 I can check my device is online
-
-**Objectives:**
-
 1. **Enhance User Independence:**
    - **Objective:** Improve the self-reliance of wheelchair users by providing a comprehensive evaluation system.
    - **Key Results:** Users should be able to assess their wheelchair usage abilities independently.
@@ -46,6 +25,12 @@
 5. **Create User-Friendly GUI:**
    - **Objective:** Develop a Graphical User Interface (GUI) that is easy to use and understand, catering to both wheelchair users and physical therapists.
    - **Key Results:** Ensure information received from IMU sensors is displayed in a user-friendly format for effective evaluation.
+
+
+## Stakeholder
+1. Wheelchair Company
+2. Physical Therapy
+3. Wheelchair Coach
 
 **User Stories and Acceptance Criteria:**
 
