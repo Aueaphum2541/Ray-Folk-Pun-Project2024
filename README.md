@@ -26,7 +26,7 @@
 [M5StickC](https://docs.m5stack.com/en/core/m5stickc) (M5Stick-C)
 - [FTDI USB serial](https://docs.m5stack.com/en/core/m5stickc)
 - LCD 80x160
-- [6-axis IMU MPU6886] (https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
+- [6-axis IMU MPU6886](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
 
 
 ## Stakeholder
