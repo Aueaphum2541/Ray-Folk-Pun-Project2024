@@ -10,26 +10,6 @@
 2. objecrtive 2
 3. objective 3
 
-## Project Brief
-
-## Members
-### TAIST AIoT 
-1. Ms. Sitaporn Anektanarojkul ID:6622040274 [(sitaporn.ane@gmail.com)](mailto:sitaporn.ane@gmail.com)
-
-2. Mr. Chakapat Chokchaisiri ID:6622040308 [(chakapat.chokchaisiri@gmail.com)](mailto:chakapat.chokchaisiri@gmail.com)
-
-3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
-
-## Hardware
-![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/61ed37ec-3e5c-4cbb-ad19-d9cf908cda47)
-
-
-[M5StickC](https://docs.m5stack.com/en/core/m5stickc) (M5Stick-C)
-- [FTDI USB serial](https://docs.m5stack.com/en/core/m5stickc)
-- LCD 80x160
-- [6-axis IMU MPU6886](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
-
-
 ## Stakeholder
 1. Wheelchair Company
 2. Physical Therapy
@@ -92,3 +72,23 @@
 6. **As a Wheelchair Company, I want to ensure accurate and reliable data processing for evaluating wheelchair performance.**
    - **Scenario:** The system processes the movement data received from IMU sensors and generates evaluation results.
    - **Acceptance Criteria:** The maximum error percentage for distance and time measurements is within acceptable limits (e.g., 1.5%).
+  
+## Project Brief
+
+## Members
+### TAIST AIoT 
+1. Ms. Sitaporn Anektanarojkul ID:6622040274 [(sitaporn.ane@gmail.com)](mailto:sitaporn.ane@gmail.com)
+
+2. Mr. Chakapat Chokchaisiri ID:6622040308 [(chakapat.chokchaisiri@gmail.com)](mailto:chakapat.chokchaisiri@gmail.com)
+
+3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
+
+## Hardware
+![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/61ed37ec-3e5c-4cbb-ad19-d9cf908cda47)
+
+
+[M5StickC](https://docs.m5stack.com/en/core/m5stickc) (M5Stick-C)
+- [FTDI USB serial](https://docs.m5stack.com/en/core/m5stickc)
+- LCD 80x160
+- [6-axis IMU MPU6886](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
+
