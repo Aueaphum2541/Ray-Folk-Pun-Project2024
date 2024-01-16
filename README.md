@@ -9,7 +9,7 @@
 2. objecrtive 2
 3. objective 3
 
-# Project Brief
+## Project Brief
 
 ## Members
 ### TAIST AIoT 
@@ -19,7 +19,7 @@
 
 3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
 
-### Hardware
+## Hardware
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/61ed37ec-3e5c-4cbb-ad19-d9cf908cda47)
 
 
