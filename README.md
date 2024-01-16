@@ -44,3 +44,51 @@
 
 
      ii. acceptance criteria #2 I can check my device is online
+
+**Objectives:**
+
+1. **Enhance User Independence:**
+   - **Objective:** Improve the self-reliance of wheelchair users by providing a comprehensive evaluation system.
+   - **Key Results:** Users should be able to assess their wheelchair usage abilities independently.
+
+2. **Facilitate Proper Wheelchair Selection:**
+   - **Objective:** Assist users in selecting the most suitable wheelchair based on their physical abilities and preferences.
+   - **Key Results:** Provide personalized recommendations for wheelchair types that align with the user's physical fitness.
+
+3. **Ensure Mobility and Health:**
+   - **Objective:** Minimize mobility barriers and promote the overall physical health of wheelchair users.
+   - **Key Results:** Evaluate and enhance the efficiency of wheelchair usage to prevent negative impacts on physical health.
+
+4. **Utilize IMU Technology:**
+   - **Objective:** Incorporate Inertial Measurement Unit (IMU) technology for accurate and real-time movement data collection.
+   - **Key Results:** Enable precise tracking of wheelchair movements, contributing to the evaluation process.
+
+5. **Create User-Friendly GUI:**
+   - **Objective:** Develop a Graphical User Interface (GUI) that is easy to use and understand, catering to both wheelchair users and physical therapists.
+   - **Key Results:** Ensure information received from IMU sensors is displayed in a user-friendly format for effective evaluation.
+
+**User Stories and Acceptance Criteria:**
+
+1. **As a Wheelchair User, I want to assess my physical abilities for optimal wheelchair usage.**
+   - **Scenario:** When the user initiates the evaluation process, the system prompts for personal information (name, surname, weight, height).
+   - **Acceptance Criteria:** The system accurately records and stores the user's information for future evaluations.
+
+2. **As a Wheelchair Coach, I want to evaluate the user's strength and mobility to recommend suitable wheelchairs.**
+   - **Scenario:** During the evaluation, the system conducts strength tests, anaerobic performance assessments, and evaluates nimbleness.
+   - **Acceptance Criteria:** The system processes the data and generates parameters (distance, speed, time) for each test, indicating suitability.
+
+3. **As a Physical Therapist, I want to access accurate data for evaluating the user's wheelchair usage abilities.**
+   - **Scenario:** The physical therapist enters the user's information and observes the wheelchair movement during the tests.
+   - **Acceptance Criteria:** The system accurately records and displays the data, allowing the therapist to make informed assessments.
+
+4. **As a Wheelchair Company, I want to use the evaluation system to recommend appropriate wheelchair models.**
+   - **Scenario:** Based on the evaluation results, the system provides personalized recommendations for wheelchair types.
+   - **Acceptance Criteria:** The recommendations align with the user's physical fitness and usage requirements.
+
+5. **As a Wheelchair User, I want to receive feedback on my wheelchair usage abilities for continuous improvement.**
+   - **Scenario:** After completing the evaluation, the system provides a summary of the user's performance and suggests areas for improvement.
+   - **Acceptance Criteria:** The feedback is clear, actionable, and contributes to enhancing the user's wheelchair skills.
+
+6. **As a Wheelchair Company, I want to ensure accurate and reliable data processing for evaluating wheelchair performance.**
+   - **Scenario:** The system processes the movement data received from IMU sensors and generates evaluation results.
+   - **Acceptance Criteria:** The maximum error percentage for distance and time measurements is within acceptable limits (e.g., 1.5%).
