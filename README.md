@@ -20,6 +20,8 @@ Repo to collect example of ICT720 Course
 
 3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
 
+### Hardware
+https://item-shopping.c.yimg.jp/i/n/iothonpo_a087-m5s-k016-p
 
 ## Stakeholder
 1. Wheelchair Company
