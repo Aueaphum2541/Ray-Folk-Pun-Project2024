@@ -3,10 +3,12 @@ Repo to collect example of ICT720 Course
 
 
 ## Stakeholder
-1. home owner
-2. company staff
+1. Wheelchair Company
+2. Physical Therapy
+3. Wheelchair Coach
 
-## user stories
+## User Stories
+
 1. US1: as an owner, I want to register a device with my home WiFi network, so that I can use it.
 
    
