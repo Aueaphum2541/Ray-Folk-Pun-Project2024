@@ -21,9 +21,14 @@ Repo to collect example of ICT720 Course
 3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
 
 ### Hardware
-![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/6d9c9c4d-5b15-45a8-97eb-57b5077d8dc2)
+![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/61ed37ec-3e5c-4cbb-ad19-d9cf908cda47)
 
-https://item-shopping.c.yimg.jp/i/n/iothonpo_a087-m5s-k016-p
+
+[M5StickC]([https://docs.m5stack.com/en/core/m5stickc)]) (M5Stick-C)
+- [FTDI USB serial]([[https://docs.m5stack.com/en/core/m5stickc](https://ftdichip.com/drivers/vcp-drivers/))])
+- LCD 80x160
+- [6-axis IMU MPU6886] ([https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf])
+
 
 ## Stakeholder
 1. Wheelchair Company
