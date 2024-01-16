@@ -21,6 +21,8 @@ Repo to collect example of ICT720 Course
 3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
 
 ### Hardware
+![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/6d9c9c4d-5b15-45a8-97eb-57b5077d8dc2)
+
 https://item-shopping.c.yimg.jp/i/n/iothonpo_a087-m5s-k016-p
 
 ## Stakeholder
