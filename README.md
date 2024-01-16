@@ -13,11 +13,11 @@ Repo to collect example of ICT720 Course
 # Project Brief
 
 # Members
-1. Ms. Sitaporn Anektanarojkul ID:6622040274 [Email Me](mailto:sitaporn.ane@gmail.com)
+1. Ms. Sitaporn Anektanarojkul ID:6622040274 [(sitaporn.ane@gmail.com)](mailto:sitaporn.ane@gmail.com)
 
-2. Mr. Chakapat Chokchaisiri ID:6622040308 [Email Me](mailto:chakapat.chokchaisiri@gmail.com)
+2. Mr. Chakapat Chokchaisiri ID:6622040308 [(chakapat.chokchaisiri@gmail.com)](mailto:chakapat.chokchaisiri@gmail.com)
 
-3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [Email Me](mailto:aueawatth.aue@gmail.com)
+3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
 
 
 ## Stakeholder
