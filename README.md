@@ -12,8 +12,8 @@ Repo to collect example of ICT720 Course
 
 # Project Brief
 
-# Members
-# TAIST AIoT 
+## Members
+### TAIST AIoT 
 1. Ms. Sitaporn Anektanarojkul ID:6622040274 [(sitaporn.ane@gmail.com)](mailto:sitaporn.ane@gmail.com)
 
 2. Mr. Chakapat Chokchaisiri ID:6622040308 [(chakapat.chokchaisiri@gmail.com)](mailto:chakapat.chokchaisiri@gmail.com)
