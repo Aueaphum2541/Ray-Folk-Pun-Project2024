@@ -1,5 +1,5 @@
 # ICT720-project-2024
-# Group 1 [Yes Wheelchair]([https://www.facebook.com/100066453249785/posts/pfbid02DiEnpRqT1H4SUK5FBEpH5kz9rZoqYkPg4KNShhSsfJ4qUXWBaDWnk1JEBK1ZKjNhl])
+# Group 1 [Yes Wheelchair](https://www.facebook.com/100066453249785/posts/pfbid02DiEnpRqT1H4SUK5FBEpH5kz9rZoqYkPg4KNShhSsfJ4qUXWBaDWnk1JEBK1ZKjNhl)
 ![419119466_727492066142562_5958509345109420164_n](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/e5daaaf6-a96d-479f-8115-b71499980b1d)
 
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/5db47476-e9c5-4a91-936e-4eaef0677feb)
@@ -23,10 +23,10 @@
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/61ed37ec-3e5c-4cbb-ad19-d9cf908cda47)
 
 
-[M5StickC]([https://docs.m5stack.com/en/core/m5stickc)]) (M5Stick-C)
-- [FTDI USB serial]([[https://docs.m5stack.com/en/core/m5stickc](https://ftdichip.com/drivers/vcp-drivers/))])
+[M5StickC](https://docs.m5stack.com/en/core/m5stickc) (M5Stick-C)
+- [FTDI USB serial](https://docs.m5stack.com/en/core/m5stickc)
 - LCD 80x160
-- [6-axis IMU MPU6886] ([https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf])
+- [6-axis IMU MPU6886] (https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
 
 
 ## Stakeholder
