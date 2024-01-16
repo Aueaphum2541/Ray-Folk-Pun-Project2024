@@ -5,6 +5,20 @@
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/5db47476-e9c5-4a91-936e-4eaef0677feb)
 
 Repo to collect example of ICT720 Course
+## Objectives
+1. objective 1
+2. objecrtive 2
+3. objective 3
+
+# Project Brief
+
+# Members
+1. Ms. Sitaporn Anektanarojkul ID:6622040274 [Email Me](mailto:sitaporn.ane@gmail.com)
+
+2. Mr. Chakapat Chokchaisiri ID:6622040308 [Email Me](mailto:chakapat.chokchaisiri@gmail.com)
+
+3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [Email Me](mailto:aueawatth.aue@gmail.com)
+
 
 ## Stakeholder
 1. Wheelchair Company
