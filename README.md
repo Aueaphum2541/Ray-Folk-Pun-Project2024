@@ -1,8 +1,8 @@
-# ict720-project-2024 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/2d306794-0f4d-45a6-854a-e5b69226964b) 
+# ict720-project-2024
 # Yes Wheelchair 
-Repo to collect example of ICT720 Course
 
 ![Uploading 419119466_727492066142562_5958509345109420164_n.png…]()
+Repo to collect example of ICT720 Course
 
 ## Stakeholder
 1. Wheelchair Company
