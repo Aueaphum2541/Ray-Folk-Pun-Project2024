@@ -57,7 +57,7 @@
 
 ## Members
 ### TAIST AIoT 
-1. Ms. Sitaporn Anektanarojkul ID:6622040274 [(sitaporn.ane@gmail.com)](mailto:sitaporn.ane@gmail.com)
+1. Ms. Sitaporn Anektanarojkul ID:6622040274 [(sitaporn.anek@gmail.com)](mailto:sitaporn.anek@gmail.com)
 
 2. Mr. Chakapat Chokchaisiri ID:6622040308 [(chakapat.chokchaisiri@gmail.com)](mailto:chakapat.chokchaisiri@gmail.com)
 
