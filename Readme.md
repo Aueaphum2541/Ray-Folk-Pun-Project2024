@@ -28,7 +28,7 @@
 
 
 ## Stakeholder
-1. Wheelchair Company
+1. Matsunaga Wheelchair Company
 2. Physical Therapy
 3. Wheelchair Coach
 
@@ -46,11 +46,11 @@
 4. As a **Physical Therapist**, I want to **access accurate data for evaluating the user's wheelchair usage abilities** so that **I can provide tailored therapeutic interventions and support.**
    - Scenario: **Physical Therapist's Data Access**, **given a Physical Therapist accessing the system**, when **entering the user's information and observing wheelchair movement during tests**, then **the system accurately records and displays the data, enabling informed assessments**.
 
-5. As a **Wheelchair Company**, I want to **use the evaluation system to recommend appropriate wheelchair models** so that **users can have a personalized and optimal mobility solution.**
-   - Scenario: **Wheelchair Company's Recommendations**, given **evaluation results**, when **the system processes the data**, then **it provides personalized recommendations for Wheelchair types, as required by a Wheelchair Company, based on the user's physical fitness and usage requirements**.
+5. As a **Matsunaga Wheelchair Company**, I want to **enhance the detection of movement within the home of an elderly person using a wheelchair. The emphasis is on collecting long-term data and utilizing indicators of activity type rather than physical performance**. so that **to be ensure accurate and reliable assessment results, fostering user trust in the evaluation outcomes**.
+   - Scenario: **Movement Detection and Assessment, given movement data received from IMU sensors during the evaluation**, when **the system processes the data**, then **it generates accurate and reliable evaluation results, ensuring the maximum error percentage for distance and time measurements is within acceptable limits. The focus is on capturing long-term data and distinguishing between various types of activities to provide a comprehensive understanding of the user's mobility patterns. This approach enhances the overall assessment and promotes trust in the evaluation results among wheelchair users.**
 
-6. As a **Wheelchair Company**, I want to **ensure accurate and reliable data processing for evaluating wheelchair performance** so that **users can trust the assessment results and recommendations.**
-   - Scenario: **Data Processing for Trustworthy Results**, given **movement data received from IMU sensors during the evaluation**, **when the system processes the data**, then **it generates accurate and reliable evaluation results, ensuring the maximum error percentage for distance and time measurements is within acceptable limits (e.g., 1.5%).**
+6. As a **Matsunaga Wheelchair Company**, I want to **use the evaluation system to recommend appropriate wheelchair models** so that **users can have a personalized and optimal mobility solution.**
+   - Scenario: **Wheelchair Company's Recommendations**, given **evaluation results**, when **the system processes the data**, then **it provides personalized recommendations for Wheelchair types, as required by a Wheelchair Company, based on the user's physical fitness and usage requirements**.
 
   
 ## Project Brief
