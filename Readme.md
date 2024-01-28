@@ -72,3 +72,7 @@
 - LCD 80x160
 - [6-axis IMU MPU6886](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
 
+## State Diagram
+![wheelchair state diagram (1)](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/156740150/c0b54d8c-5d9e-4d31-8af0-5142a6a35948)
+
+
