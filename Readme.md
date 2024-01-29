@@ -78,3 +78,4 @@
 ## Sequence Diagram
 
 ## System Architecture
+[System Architecture.pdf](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/files/14084160/System.Architecture.pdf)
