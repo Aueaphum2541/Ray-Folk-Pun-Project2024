@@ -78,4 +78,7 @@
 ## Sequence Diagram
 
 ## System Architecture
-[System Architecture.pdf](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/files/14084160/System.Architecture.pdf)
+![System Architecture](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/151521992/1eeae141-2c23-46c9-bb13-b26bc1372c3b)
+![System Architecture](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/151521992/4996583f-a365-47e3-91be-79404838435a)
+
+
