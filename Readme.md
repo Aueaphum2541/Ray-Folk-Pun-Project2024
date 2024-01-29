@@ -75,4 +75,6 @@
 ## State Diagram
 ![wheelchair state diagram (1)](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/156740150/c0b54d8c-5d9e-4d31-8af0-5142a6a35948)
 
+## Sequence Diagram
 
+## System Architecture
