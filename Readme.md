@@ -81,4 +81,5 @@
 ## System Architecture
 ![System Architecture](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/151521992/4996583f-a365-47e3-91be-79404838435a)
 
-
+## Data Flow Process
+![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/156740150/62fc35d7-c05b-43e4-9123-29fec1face5b)
