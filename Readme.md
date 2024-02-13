@@ -73,3 +73,7 @@
 
 ## Data Flow Process
 ![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/156740150/62fc35d7-c05b-43e4-9123-29fec1face5b)
+
+## Data Modeling
+![Data_Modeling1](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/151521992/ad0b5fa2-40d1-45d7-a7a7-f84eaa7d5ceb)
+
