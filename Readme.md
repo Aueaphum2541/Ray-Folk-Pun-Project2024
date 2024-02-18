@@ -54,12 +54,12 @@
 3. Mr. Aueaphum Aueawatthanaphisut ID:6622040662 [(aueawatth.aue@gmail.com)](mailto:aueawatth.aue@gmail.com)
 
 ## Hardware
-![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/61ed37ec-3e5c-4cbb-ad19-d9cf908cda47)
+
+![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/616693fe-8d8d-425b-be37-f53045735ad9)
 
 
-[M5StickC](https://docs.m5stack.com/en/core/m5stickc) (M5Stick-C)
+[ M5Stack Capsule Kit w/ M5StampS3]([https://docs.m5stack.com/en/core/m5stickc](https://shop.m5stack.com/products/m5stack-capsule-kit-w-m5stamps3)) ( M5Stack Capsule Kit w/ M5StampS3)
 - [FTDI USB serial](https://docs.m5stack.com/en/core/m5stickc)
-- LCD 80x160
 - [6-axis IMU MPU6886](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
 
 ## State Diagram
