@@ -60,7 +60,7 @@
 
 [ M5Stack Capsule Kit w/ M5StampS3]([https://docs.m5stack.com/en/core/m5stickc](https://shop.m5stack.com/products/m5stack-capsule-kit-w-m5stamps3)) ( M5Stack Capsule Kit w/ M5StampS3)
 - [FTDI USB serial](https://docs.m5stack.com/en/core/m5stickc)
-- [6-axis IMU MPU6886](https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf)
+- [6-axis IMU BMI270]([https://m5stack.oss-cn-shenzhen.aliyuncs.com/resource/docs/datasheet/core/MPU-6886-000193%2Bv1.1_GHIC_en.pdf])
 
 ## State Diagram
 ![wheelchair state diagram (1)](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/156740150/c0b54d8c-5d9e-4d31-8af0-5142a6a35948)
