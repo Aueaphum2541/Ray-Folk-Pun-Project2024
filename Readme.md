@@ -77,3 +77,41 @@
 ## Data Modeling
 ![Data_Modeling1](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/151521992/ad0b5fa2-40d1-45d7-a7a7-f84eaa7d5ceb)
 
+## Wheelchair User Detection with Grove Vision AI Module V2 using YOLO V8 getting started with SenseCraft AI
+
+The operation of the Grove Vision AI v2 board is also convenient with a live preview on Seeed Studio's own SenseCraft AI website, detecting people using wheelchairs using YOLO V8.
+
+![IMG_3110](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/1118c332-4153-4270-84a7-3fd7812893f3)
+![grove 7732776a](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/46f5bed3-291f-48a4-8b59-3ce33e431962)
+
+Front and side images of a wheelchair user were used as the data set.
+![IMG_3169](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/7ba19537-b8e8-4362-a21b-80b43da757de)
+![IMG_3128](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/9150187a-a75e-4c97-b33f-bc32670ab4d4)
+
+Deploy Person Detection--YOLOV8 Model
+Supported Devices
+The model can be deployed on the following devices that is Grove-Vision AI V2
+
+Connect Device
+1. Connect Grove - Vision AI V2 to the camera via the CSI connection cable.
+2. Connect the Grove - Vision AI V2 to your computer via USB. 
+3. Select USB Single/Serial debug unit to connect.
+
+![image](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/f3f74ab1-b685-4857-949b-bc5289c07564)
+
+The solution that can detect a wheelchair user all view such as front view, side view, and so on.
+![Screenshot 2024-04-27 161734](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/c3745822-b425-47da-9fd0-a7c5bfcf6c80)
+![Screenshot 2024-04-27 161757](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/dd9237b4-18de-4175-b0f9-a7f7be76e5d7)
+
+and that have a data in logger such as preprocess, inference, postprocess and have bounding box for checking for detection
+![Screenshot 2024-04-27 161816](https://github.com/Aueaphum2541/Ray-Folk-Pun-Project2024/assets/109651869/abbae8e2-e2bf-4a51-baf5-63551215f8ad)
+
+
+
+
+
+
+
+
+
+
