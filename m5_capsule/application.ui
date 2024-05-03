@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Application</class>
+ <widget class="QMainWindow" name="Application">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>843</width>
+    <height>871</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Application</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="menu_tab">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="logging_tab">
+       <attribute name="title">
+        <string>Log</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="2" column="0" alignment="Qt::AlignHCenter|Qt::AlignTop">
+         <widget class="QLabel" name="dist_label">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Distance (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="main_layout">
+          <item>
+           <layout class="QHBoxLayout" name="button_layout">
+            <item>
+             <widget class="QPushButton" name="start_button">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Start</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="stop_button">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Stop</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="reset_button">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Reset</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="option_layout">
+            <item>
+             <widget class="QCheckBox" name="check_box_show_graph">
+              <property name="text">
+               <string>Show raw data graph</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="status_label">
+              <property name="text">
+               <string>Status: Off</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="raw_data_graph_layout">
+            <property name="spacing">
+             <number>20</number>
+            </property>
+            <item row="3" column="3">
+             <widget class="QGraphicsView" name="graph_gx"/>
+            </item>
+            <item row="2" column="3" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_ax">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Accelerometer X</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="6" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_gz">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Gyroscope Z</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="4" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_ay">
+              <property name="contextMenuPolicy">
+               <enum>Qt::DefaultContextMenu</enum>
+              </property>
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Accelerometer Y</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="6" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_az">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Accelerometer Z</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="6">
+             <widget class="QGraphicsView" name="graph_gz"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QGraphicsView" name="graph_ax"/>
+            </item>
+            <item row="1" column="6">
+             <widget class="QGraphicsView" name="graph_az"/>
+            </item>
+            <item row="3" column="4">
+             <widget class="QGraphicsView" name="graph_gy"/>
+            </item>
+            <item row="4" column="4" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_gy">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Gyroscope Y</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QGraphicsView" name="graph_ay"/>
+            </item>
+            <item row="4" column="3" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_gx">
+              <property name="layoutDirection">
+               <enum>Qt::LeftToRight</enum>
+              </property>
+              <property name="text">
+               <string>Gyroscope X</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0" alignment="Qt::AlignHCenter|Qt::AlignTop">
+         <widget class="QLabel" name="vel_label">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Velocity (m/s)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGraphicsView" name="graph_dist"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGraphicsView" name="graph_vel"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="total_dist_label">
+          <property name="text">
+           <string>Total Distance (m) =</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="average_vel_label">
+          <property name="text">
+           <string>Average Velocity = </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="load_data_tab">
+       <attribute name="title">
+        <string>Load</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="2" column="0">
+           <layout class="QGridLayout" name="raw_data_graph_layout_2">
+            <property name="spacing">
+             <number>20</number>
+            </property>
+            <item row="2" column="3" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_accel_x">
+              <property name="text">
+               <string>Accel X</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="3">
+             <widget class="QGraphicsView" name="graph_gx_2"/>
+            </item>
+            <item row="1" column="3">
+             <widget class="QGraphicsView" name="graph_ax_2"/>
+            </item>
+            <item row="3" column="6">
+             <widget class="QGraphicsView" name="graph_gz_2"/>
+            </item>
+            <item row="2" column="4" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_accel_y">
+              <property name="text">
+               <string>Accel Y</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="4">
+             <widget class="QGraphicsView" name="graph_ay_2"/>
+            </item>
+            <item row="3" column="4">
+             <widget class="QGraphicsView" name="graph_gy_2"/>
+            </item>
+            <item row="2" column="6" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_accel_z">
+              <property name="text">
+               <string>Accel Z</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="6">
+             <widget class="QGraphicsView" name="graph_az_2"/>
+            </item>
+            <item row="4" column="3" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_gyro_x">
+              <property name="text">
+               <string>Gyro X</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="4" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_gyro_y">
+              <property name="text">
+               <string>Gyro Y</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="6" alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_gyro_z">
+              <property name="text">
+               <string>Gyro Z</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="0" column="1">
+             <widget class="QPushButton" name="load_button">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="text">
+               <string>Load data</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QPushButton" name="send_to_line_button">
+              <property name="text">
+               <string>Send to Line</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QHBoxLayout" name="option_layout_2">
+            <item>
+             <widget class="QCheckBox" name="raw_data_option">
+              <property name="text">
+               <string>Show raw data</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="processed_data_option">
+              <property name="text">
+               <string>Show processed data</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="show_result_option">
+              <property name="text">
+               <string>Show result</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="0">
+           <layout class="QVBoxLayout" name="processed_graph_layout">
+            <property name="spacing">
+             <number>20</number>
+            </property>
+            <item>
+             <widget class="QGraphicsView" name="distance_graph"/>
+            </item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_distance">
+              <property name="text">
+               <string>Distance</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGraphicsView" name="velocity_graph"/>
+            </item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+             <widget class="QLabel" name="label_loaded_velocity">
+              <property name="text">
+               <string>Veolocity</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0">
+           <layout class="QHBoxLayout" name="result_layout">
+            <item>
+             <widget class="QLabel" name="distance_label">
+              <property name="text">
+               <string>Distance = </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="average_velocity_label">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Average Velocity = </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>843</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
