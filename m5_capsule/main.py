@@ -33,11 +33,11 @@ raw_data = {"timestamp":[], "accel_x":[], "accel_y":[], "accel_z":[], "gyro_x":[
 processed_data = {"distance":[], "velocity":[]}
 loaded_data = {"timestamp":[], "accel_x":[], "accel_y":[], "accel_z":[], "gyro_x":[], "gyro_y":[], "gyro_z":[], "distance":[], "velocity":[]}
 
-# if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
-#     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
+    QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
 
-# if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
-#     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
+if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
+    QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
 cumulative_dist = 0
 
