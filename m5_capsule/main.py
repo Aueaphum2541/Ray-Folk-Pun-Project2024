@@ -33,18 +33,18 @@ raw_data = {"timestamp":[], "accel_x":[], "accel_y":[], "accel_z":[], "gyro_x":[
 processed_data = {"distance":[], "velocity":[]}
 loaded_data = {"timestamp":[], "accel_x":[], "accel_y":[], "accel_z":[], "gyro_x":[], "gyro_y":[], "gyro_z":[], "distance":[], "velocity":[]}
 
-if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
-    QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+# if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
+#     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
 
-if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
-    QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
+# if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
+#     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
 cumulative_dist = 0
 
 class MainWindow(QtWidgets.QMainWindow, Ui_Application):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.setFixedSize(1400, 1200)
+        self.setFixedSize(1400, 1000)
         self.setupUi(self)
         self.setFont(QtGui.QFont("Cordia New", 14))
 
@@ -256,16 +256,19 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
 
     def upload_to_google_drive(self, image_path, creds, file_type):
         drive_service = build('drive', 'v3', credentials=creds)
+        folder_id = '1NqkqAf8rK1V9sh6LHarIg5V5XbSEudz4'
 
         if file_type == 'image':
             file_metadata = {
                 'name': image_path.split('\\')[-1],
+                'parents': [folder_id],
                 'mimeType': 'image/jpeg'
             }
             media = MediaFileUpload(image_path, mimetype='image/jpeg')
         elif file_type == 'text':
             file_metadata = {
                 'name': image_path.split('/')[-1],
+                'parents': [folder_id],
                 'mimeType': 'text/plain'
             }
             media = MediaFileUpload(image_path, mimetype='text/plain')
@@ -318,7 +321,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
             "Authorization": "Bearer 1CTdQTPxdsLPekcTUoPolFn2UCtpsHvFg1ntA5IsSDJFjIbiCAviCIGBU6zvLOGfKWnxvQia9J2bN2eZ09MF8n1YKuKUoXofdXCIc3y4SlRkPNzZ9yobx0b0sndA0h7bsCzAs9Q7o/aeC0B1oY9nXwdB04t89/1O/w1cDnyilFU="
         }
 
-        data = {
+        data1 = {
             "to": "Uf652f2e71d592091ced8215c06ef6d41",
             "messages": [
                 {
@@ -346,12 +349,65 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
             ]
         }
 
+        data2 = {
+            "to": "Uf652f2e71d592091ced8215c06ef6d41",
+            "messages": [
+                {
+                    "type": "flex",
+                    "altText": "New Message",
+                    "contents": {
+                        "type": "bubble",
+                        "direction": "ltr",
+                        "header": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Visit your drive",
+                                    "weight": "bold",
+                                    "size": "lg",
+                                    "align": "center"
+                                }
+                            ]
+                        },
+                        "body": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "Click the link below:",
+                                    "align": "center"
+                                }
+                            ]
+                        },
+                        "footer": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "button",
+                                    "action": {
+                                        "type": "uri",
+                                        "label": "See your data",
+                                        "uri": "https://drive.google.com/drive/u/6/folders/1NqkqAf8rK1V9sh6LHarIg5V5XbSEudz4"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+
         # Send a POST request to the LINE API
-        response = requests.post(url, headers=headers, json=data)
-        if response.status_code == 200:
+        response1 = requests.post(url, headers=headers, json=data1)
+        response2 = requests.post(url, headers=headers, json=data2)
+        if response1.status_code == 200 and response2.status_code == 200:
             QMessageBox.information(None, "Success", "Message sent to Line successfully!")
         else:
-            QMessageBox.critical(None, "Error", f"Failed to send message to Line. Error: {response.text}")
+            QMessageBox.critical(None, "Error", f"Failed to send message to Line. \nError: {response1.text} \nError: {response2.text}")
 
     # Callback function when the client receives a CONNACK response from the server
     def on_connect(self, client, userdata, flags, rc):
@@ -459,12 +515,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
 
         dist = self.figure_dist.add_subplot(111)
         dist.plot(processed_data["distance"])
+        dist.set_xlabel("Time (s)")
+        dist.set_ylabel("Distance (m)")
         dist.tick_params(axis='x', labelsize=6)
         dist.tick_params(axis='y', labelsize=6)
         self.canvas_dist.draw()
 
         vel = self.figure_vel.add_subplot(111)
         vel.plot(processed_data["velocity"])
+        vel.set_xlabel("Time (s)")
+        vel.set_ylabel("Velocity (m/s)")
         vel.tick_params(axis='x', labelsize=6)
         vel.tick_params(axis='y', labelsize=6)
         self.canvas_vel.draw()
