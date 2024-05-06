@@ -5,13 +5,26 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import sys
-from PyQt5.QtWidgets import QFileDialog, QVBoxLayout
+from PyQt5.QtWidgets import QFileDialog, QVBoxLayout, QMessageBox
 from PyQt5 import QtWidgets, QtCore
 from PyQt5 import QtGui
 import numpy as np
 
 # MQTT Lib
 import paho.mqtt.client as mqtt
+
+# HTTP Lib
+import requests
+
+# Google Drive Lib
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
+import json
+
+# OS Lib
+import os
 
 raw_mqtt_message = "contain raw data"
 # example topic: thammasat/chakapat/sensor
@@ -20,18 +33,18 @@ raw_data = {"timestamp":[], "accel_x":[], "accel_y":[], "accel_z":[], "gyro_x":[
 processed_data = {"distance":[], "velocity":[]}
 loaded_data = {"timestamp":[], "accel_x":[], "accel_y":[], "accel_z":[], "gyro_x":[], "gyro_y":[], "gyro_z":[], "distance":[], "velocity":[]}
 
-if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
-    QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
+# if hasattr(QtCore.Qt, 'AA_EnableHighDpiScaling'):
+#     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
 
-if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
-    QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
+# if hasattr(QtCore.Qt, 'AA_UseHighDpiPixmaps'):
+#     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
 cumulative_dist = 0
 
 class MainWindow(QtWidgets.QMainWindow, Ui_Application):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.setFixedSize(1000, 1000)
+        self.setFixedSize(1400, 1200)
         self.setupUi(self)
         self.setFont(QtGui.QFont("Cordia New", 14))
 
@@ -190,6 +203,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
             self.result_layout.itemAt(i).widget().setVisible(logic)
 
     def load_data(self):
+        global file_path
         file_path, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Text Files (*.txt)")
         if file_path != "":
             print("File path = ", file_path)
@@ -228,9 +242,116 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
             self.average_velocity_label.setText("Average Velocity: " + str(round(np.mean(loaded_data["velocity"]), 2)) + " m/s")
             self.send_to_line_button.setVisible(True)
 
+    def save_graph(self, figure, figure_path):
+        os.makedirs(os.path.dirname(figure_path), exist_ok=True)
+        figure.savefig(figure_path)
+
+    def create_credentials(self, credentials_path):
+        with open(credentials_path, 'r') as file:
+            credentials = json.load(file)
+        # Accept authorization
+        flow = InstalledAppFlow.from_client_config(credentials, ['https://www.googleapis.com/auth/drive'])
+        credentials = flow.run_local_server(port=0)
+        return credentials
+
+    def upload_to_google_drive(self, image_path, creds, file_type):
+        drive_service = build('drive', 'v3', credentials=creds)
+
+        if file_type == 'image':
+            file_metadata = {
+                'name': image_path.split('\\')[-1],
+                'mimeType': 'image/jpeg'
+            }
+            media = MediaFileUpload(image_path, mimetype='image/jpeg')
+        elif file_type == 'text':
+            file_metadata = {
+                'name': image_path.split('/')[-1],
+                'mimeType': 'text/plain'
+            }
+            media = MediaFileUpload(image_path, mimetype='text/plain')
+
+        # Upload the file to Google Drive
+        file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+        file_id = file.get('id')
+
+        # Define request body for permission
+        new_permission = {
+            'type': 'anyone',
+            'role': 'reader'
+        }
+        drive_service.permissions().create(fileId=file_id, body=new_permission).execute()
+
+        return file_id
+    
     def send_to_line(self):
-        # Ray part
-        print("Send to Line")
+        # Create a text message to send to Line
+        text_message = "Distance: " + str(round(loaded_data["distance"][-1], 2)) + " m" + "\n" + "Average Velocity: " + str(round(np.mean(loaded_data["velocity"]), 2)) + " m/s"
+        
+        # Path to the distance image file
+        dist_path = 'D:\\Download\\dist.png'
+        self.save_graph(self.figure_dist_2, dist_path)
+        
+        # Path to the velocity image file
+        vel_path = 'D:\\Download\\vel.png'
+        self.save_graph(self.figure_vel_2, vel_path)
+
+        # Path to the credentials file ** NEED TO MODIFY  **
+        credentials_path = 'D:\Download\client_secret_155036317222-jpt6af4eliqe1odvpml9nife8u5arvbc.apps.googleusercontent.com.json'
+        credentials = self.create_credentials(credentials_path)
+
+        # Call the function to upload "distance" image to google drive and get file ID
+        dist_file_id = self.upload_to_google_drive(dist_path, credentials, "image")
+        dist_url = f"https://drive.google.com/uc?export=download&id={dist_file_id}"
+
+        # Call the function to upload "velocity" image to google drive and get file ID
+        vel_file_id = self.upload_to_google_drive(vel_path, credentials, "image")
+        vel_url = f"https://drive.google.com/uc?export=download&id={vel_file_id}"
+
+        # Call the function to upload raw data to google drive and get file ID
+        data_file_id = self.upload_to_google_drive(file_path, credentials, "text")
+        # data_url = f"https://drive.google.com/uc?export=download&id={data_file_id}"
+
+        # Send a message to Line
+        url = "https://api.line.me/v2/bot/message/push"
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 1CTdQTPxdsLPekcTUoPolFn2UCtpsHvFg1ntA5IsSDJFjIbiCAviCIGBU6zvLOGfKWnxvQia9J2bN2eZ09MF8n1YKuKUoXofdXCIc3y4SlRkPNzZ9yobx0b0sndA0h7bsCzAs9Q7o/aeC0B1oY9nXwdB04t89/1O/w1cDnyilFU="
+        }
+
+        data = {
+            "to": "Uf652f2e71d592091ced8215c06ef6d41",
+            "messages": [
+                {
+                    "type": "text",
+                    "text": text_message
+                },
+                {
+                    "type": "text",
+                    "text": "Distance Graph"
+                },
+                {
+                    "type": "image",
+                    "originalContentUrl": dist_url,
+                    "previewImageUrl": dist_url
+                },
+                {
+                    "type": "text",
+                    "text": "Velocity Graph"
+                },
+                {
+                    "type": "image",
+                    "originalContentUrl": vel_url,
+                    "previewImageUrl": vel_url
+                }
+            ]
+        }
+
+        # Send a POST request to the LINE API
+        response = requests.post(url, headers=headers, json=data)
+        if response.status_code == 200:
+            QMessageBox.information(None, "Success", "Message sent to Line successfully!")
+        else:
+            QMessageBox.critical(None, "Error", f"Failed to send message to Line. Error: {response.text}")
 
     # Callback function when the client receives a CONNACK response from the server
     def on_connect(self, client, userdata, flags, rc):
@@ -242,7 +363,15 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
     def on_message(self, client, userdata, msg):
         raw_mqtt_message = msg.payload.decode()
         print("Received message: "+raw_mqtt_message)
-        self.temp_timestamp, self.temp_accel_x, self.temp_accel_y, self.temp_accel_z, self.temp_gyro_x, self.temp_gyro_y, self.temp_gyro_z = raw_mqtt_message.split(", ")
+        raw_mqtt_message = eval(raw_mqtt_message)
+        # self.temp_timestamp, self.temp_accel_x, self.temp_accel_y, self.temp_accel_z, self.temp_gyro_x, self.temp_gyro_y, self.temp_gyro_z = raw_mqtt_message.split(", ")
+        self.temp_timestamp = raw_mqtt_message['time']
+        self.temp_accel_x = raw_mqtt_message['accelX']
+        self.temp_accel_y = raw_mqtt_message['accelY']
+        self.temp_accel_z = raw_mqtt_message['accelZ']
+        self.temp_gyro_x = raw_mqtt_message['gyroX']
+        self.temp_gyro_y = raw_mqtt_message['gyroY']
+        self.temp_gyro_z = raw_mqtt_message['gyroZ']
         raw_data["timestamp"].append(float(self.temp_timestamp))
         raw_data["accel_x"].append(float(self.temp_accel_x))
         raw_data["accel_y"].append(float(self.temp_accel_y))
@@ -391,12 +520,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_Application):
 
         dist_2 = self.figure_dist_2.add_subplot(111)
         dist_2.plot(loaded_data["distance"])
+        dist_2.set_xlabel("Time (s)")
+        dist_2.set_ylabel("Distance (m)")
         dist_2.tick_params(axis='x', labelsize=6)
         dist_2.tick_params(axis='y', labelsize=6)
         self.canvas_dist_2.draw()
 
         vel_2 = self.figure_vel_2.add_subplot(111)
         vel_2.plot(loaded_data["velocity"])
+        vel_2.set_xlabel("Time (s)")
+        vel_2.set_ylabel("Velocity (m/s)")
         vel_2.tick_params(axis='x', labelsize=6)
         vel_2.tick_params(axis='y', labelsize=6)
         self.canvas_vel_2.draw()

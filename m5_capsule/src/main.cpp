@@ -7,6 +7,12 @@
 #include <esp_log.h> // ESP32 logging library
 #include <WiFi.h>
 #include <PubSubClient.h>
+#include <ArduinoJson.h>
+#include <iostream>
+#include <chrono>
+#include <ctime>
+#include <string>
+#include <cstring> // For std::strlen
 
 #define TAG "main" // Define a tag for logging purposes
 
@@ -21,6 +27,7 @@ const int cs = 11;
 
 // Buffer for data
 char data[100];
+JsonDocument json_doc;
 
 // const char* ssid = "Longhuang 2fl";
 // const char* password = "08045535532";
@@ -99,7 +106,8 @@ void reconnect() {
 }
 
 void loop() {
-  if (millis() - prev_time >= 986) {  // Update every around 1000ms
+  // if (millis() - prev_time >= 485) {  // Update every around 1000ms
+  if (millis() - prev_time >= 985) {  // Update every around 1000ms
     m5IMU.getSensorData(); // Get sensor data from BMI270
  
     // Format the string with the desired values
@@ -128,9 +136,29 @@ void loop() {
         }
 
       // Publish a message to the MQTT topic
-      String message = data;
-      client.publish(mqtt_topic, message.c_str(), 2);
-      Serial.println("Message sent: " + message);
+      char json_str[256];
+      json_doc.clear();
+
+      // Get the current time from the ESP32's real-time clock (RTC)
+      time_t now = time(nullptr);
+      struct tm *timeinfo;
+      timeinfo = localtime(&now);
+
+      // Format and add datetime to json_doc
+      char datetime_buffer[20]; // Adjust size as needed
+      strftime(datetime_buffer, sizeof(datetime_buffer), "%Y-%m-%d %H:%M:%S", timeinfo);
+      json_doc["datetime"] = std::string(datetime_buffer);
+
+      json_doc["time"] = millis();
+      json_doc["accelX"] = String(m5IMU.data.accelX, 6);
+      json_doc["accelY"] = String(m5IMU.data.accelY, 6);
+      json_doc["accelZ"] = String(m5IMU.data.accelZ, 6);
+      json_doc["gyroX"] = String(m5IMU.data.gyroX, 6);
+      json_doc["gyroY"] = String(m5IMU.data.gyroY, 6);
+      json_doc["gyroZ"] = String(m5IMU.data.gyroZ, 6);
+      serializeJson(json_doc, json_str);
+      client.publish(mqtt_topic, json_str, 2);
+      Serial.println("Message sent: " + String(json_str));
       prev_time = millis();
       
       client.loop();
